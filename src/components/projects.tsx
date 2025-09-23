@@ -14,12 +14,6 @@ export default function ProjectSection() {
       description: "Personal portfolio showcasing skills and work.",
       tags: ["Next.js", "Tailwind", "UI/UX"],
     },
-    // {
-    //   title: "Portfolio Website 2",
-    //   image: "/portfolio.2.jpeg",
-    //   description: "Dark-themed portfolio with animations.",
-    //   tags: ["React", "Framer Motion"],
-    // },
     {
       title: "E-Commerce Web App",
       image: "/ecommerec.png",
@@ -46,7 +40,8 @@ export default function ProjectSection() {
     >
       <h2 className="text-4xl md:text-5xl font-bold mb-16">Projects</h2>
 
-      <div className="grid grid-cols-3 gap-10 max-w-10xl mx-auto">
+      {/* ✅ Responsive grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -57,7 +52,7 @@ export default function ProjectSection() {
               activeProject === project.title
             )}
           >
-            <div className="relative w-full aspect-square h-[400px]">
+            <div className="relative w-full aspect-square h-[300px] sm:h-[350px] lg:h-[400px]">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -66,7 +61,7 @@ export default function ProjectSection() {
               />
             </div>
 
-            {/* Overlay content on hover */}
+            {/* Overlay content */}
             <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6 rounded-3xl">
               <h3 className="text-lg font-bold mb-1">{project.title}</h3>
               <p className="text-sm text-gray-300 mb-2">
