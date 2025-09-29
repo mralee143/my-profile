@@ -41,8 +41,8 @@ export default function Hero() {
           </button>
         </a>
         <a
-          href="/Ali Haider-Cv.pdf" // ✅ Correct path (without /public)
-          download="Ali Haider-Cv.pdf" // ✅ Add proper filename for download
+          href="/ALI Haider_CV.pdf" // ✅ Correct path (without /public)
+          download
           className="flex-1"
         >
           <button className="w-full px-7 bg-orange-600 hover:bg-orange-700 rounded text-white font-medium transition">
